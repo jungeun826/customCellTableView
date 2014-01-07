@@ -21,6 +21,12 @@
 		00F3DB5F187C092500B76827 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F3DB41187C092500B76827 /* UIKit.framework */; };
 		00F3DB67187C092500B76827 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00F3DB65187C092500B76827 /* InfoPlist.strings */; };
 		00F3DB69187C092500B76827 /* customCellTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F3DB68187C092500B76827 /* customCellTableViewTests.m */; };
+		00F3DB74187C09AA00B76827 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F3DB73187C09AA00B76827 /* Product.m */; };
+		00F3DB7D187C0A9B00B76827 /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F3DB7C187C0A9B00B76827 /* ProductCell.m */; };
+		00F3DB83187C0C4A00B76827 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F3DB7F187C0C4A00B76827 /* ball.png */; };
+		00F3DB84187C0C4A00B76827 /* ball1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F3DB80187C0C4A00B76827 /* ball1.png */; };
+		00F3DB85187C0C4A00B76827 /* ball2.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F3DB81187C0C4A00B76827 /* ball2.png */; };
+		00F3DB86187C0C4A00B76827 /* ball3.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F3DB82187C0C4A00B76827 /* ball3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,15 @@
 		00F3DB64187C092500B76827 /* customCellTableViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "customCellTableViewTests-Info.plist"; sourceTree = "<group>"; };
 		00F3DB66187C092500B76827 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		00F3DB68187C092500B76827 /* customCellTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = customCellTableViewTests.m; sourceTree = "<group>"; };
+		00F3DB72187C09AA00B76827 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		00F3DB73187C09AA00B76827 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		00F3DB7B187C0A9B00B76827 /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
+		00F3DB7C187C0A9B00B76827 /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
+		00F3DB7F187C0C4A00B76827 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		00F3DB80187C0C4A00B76827 /* ball1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball1.png; sourceTree = "<group>"; };
+		00F3DB81187C0C4A00B76827 /* ball2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball2.png; sourceTree = "<group>"; };
+		00F3DB82187C0C4A00B76827 /* ball3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball3.png; sourceTree = "<group>"; };
+		00F3DB8A187C0F4B00B76827 /* CarDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +127,8 @@
 		00F3DB43187C092500B76827 /* customCellTableView */ = {
 			isa = PBXGroup;
 			children = (
+				00F3DB8A187C0F4B00B76827 /* CarDelegate.h */,
+				00F3DB7E187C0C2E00B76827 /* Res */,
 				00F3DB4C187C092500B76827 /* AppDelegate.h */,
 				00F3DB4D187C092500B76827 /* AppDelegate.m */,
 				00F3DB4F187C092500B76827 /* Main.storyboard */,
@@ -119,6 +136,10 @@
 				00F3DB53187C092500B76827 /* ViewController.m */,
 				00F3DB55187C092500B76827 /* Images.xcassets */,
 				00F3DB44187C092500B76827 /* Supporting Files */,
+				00F3DB72187C09AA00B76827 /* Product.h */,
+				00F3DB73187C09AA00B76827 /* Product.m */,
+				00F3DB7B187C0A9B00B76827 /* ProductCell.h */,
+				00F3DB7C187C0A9B00B76827 /* ProductCell.m */,
 			);
 			path = customCellTableView;
 			sourceTree = "<group>";
@@ -150,6 +171,17 @@
 				00F3DB65187C092500B76827 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00F3DB7E187C0C2E00B76827 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				00F3DB7F187C0C4A00B76827 /* ball.png */,
+				00F3DB80187C0C4A00B76827 /* ball1.png */,
+				00F3DB81187C0C4A00B76827 /* ball2.png */,
+				00F3DB82187C0C4A00B76827 /* ball3.png */,
+			);
+			name = Res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				00F3DB56187C092500B76827 /* Images.xcassets in Resources */,
+				00F3DB84187C0C4A00B76827 /* ball1.png in Resources */,
+				00F3DB86187C0C4A00B76827 /* ball3.png in Resources */,
 				00F3DB48187C092500B76827 /* InfoPlist.strings in Resources */,
+				00F3DB85187C0C4A00B76827 /* ball2.png in Resources */,
+				00F3DB83187C0C4A00B76827 /* ball.png in Resources */,
 				00F3DB51187C092500B76827 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,7 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F3DB7D187C0A9B00B76827 /* ProductCell.m in Sources */,
 				00F3DB54187C092500B76827 /* ViewController.m in Sources */,
+				00F3DB74187C09AA00B76827 /* Product.m in Sources */,
 				00F3DB4E187C092500B76827 /* AppDelegate.m in Sources */,
 				00F3DB4A187C092500B76827 /* main.m in Sources */,
 			);
