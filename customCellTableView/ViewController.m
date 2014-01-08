@@ -13,7 +13,6 @@
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate, CarDelegate>{
     NSArray *data;
     NSMutableArray *cart;
-    int additemIndex;
 }
 @property (weak, nonatomic) IBOutlet UITableView *table;
 
@@ -26,7 +25,6 @@
     NSLog(@"%d",(int)indexPath.row);
     Product *item = data[indexPath.row];
     [cart addObject:item];
-    additemIndex = (int)indexPath.row;
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
     [self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -54,7 +52,8 @@
         return cell;
     }else {
         ProductCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CART_CELL" forIndexPath:indexPath];
-        Product *item = data[additemIndex];
+         NSLog(@"cart %d",(int)indexPath.row);
+        Product *item = cart[indexPath.row];
         cell.textLabel.text = item.name;
         //NSLog(@"pathrow : %d, %@", ad,item.name);
         return cell;
