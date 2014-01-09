@@ -23,7 +23,7 @@ static CartCatalog *_instance = nil;
 -(id)init{
     self = [super init];
     if(self){
-        data = @[[Product product:@"normalBall" price:@"100" image:@"ball.png"],[Product product:@"redBall" price:@"200" image:@"ball1.png"],[Product product:@"kittyBall" price:@"400" image:@"ball2.png"],[Product product:@"greenBall" price:@"300" image:@"ball3.png"]];
+        data = @[[Product product:@"normalBall" price:@"$100" image:@"ball.png"],[Product product:@"redBall" price:@"$200" image:@"ball1.png"],[Product product:@"kittyBall" price:@"$400" image:@"ball2.png"],[Product product:@"greenBall" price:@"$300" image:@"ball3.png"]];
     }
     return self;
 }
