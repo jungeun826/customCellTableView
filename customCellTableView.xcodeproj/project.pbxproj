@@ -27,6 +27,7 @@
 		00F3DB84187C0C4A00B76827 /* ball1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F3DB80187C0C4A00B76827 /* ball1.png */; };
 		00F3DB85187C0C4A00B76827 /* ball2.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F3DB81187C0C4A00B76827 /* ball2.png */; };
 		00F3DB86187C0C4A00B76827 /* ball3.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F3DB82187C0C4A00B76827 /* ball3.png */; };
+		00F4311A187E5C0900DCD80B /* NSObject+CartCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F43119187E5C0900DCD80B /* NSObject+CartCatalog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		00F3DB81187C0C4A00B76827 /* ball2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball2.png; sourceTree = "<group>"; };
 		00F3DB82187C0C4A00B76827 /* ball3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball3.png; sourceTree = "<group>"; };
 		00F3DB8A187C0F4B00B76827 /* CarDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarDelegate.h; sourceTree = "<group>"; };
+		00F43118187E5C0900DCD80B /* NSObject+CartCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CartCatalog.h"; sourceTree = "<group>"; };
+		00F43119187E5C0900DCD80B /* NSObject+CartCatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CartCatalog.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 				00F3DB73187C09AA00B76827 /* Product.m */,
 				00F3DB7B187C0A9B00B76827 /* ProductCell.h */,
 				00F3DB7C187C0A9B00B76827 /* ProductCell.m */,
+				00F43118187E5C0900DCD80B /* NSObject+CartCatalog.h */,
+				00F43119187E5C0900DCD80B /* NSObject+CartCatalog.m */,
 			);
 			path = customCellTableView;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00F3DB7D187C0A9B00B76827 /* ProductCell.m in Sources */,
+				00F4311A187E5C0900DCD80B /* NSObject+CartCatalog.m in Sources */,
 				00F3DB54187C092500B76827 /* ViewController.m in Sources */,
 				00F3DB74187C09AA00B76827 /* Product.m in Sources */,
 				00F3DB4E187C092500B76827 /* AppDelegate.m in Sources */,
@@ -498,6 +504,7 @@
 				00F3DB6E187C092500B76827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00F3DB6F187C092500B76827 /* Build configuration list for PBXNativeTarget "customCellTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +513,7 @@
 				00F3DB71187C092500B76827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
