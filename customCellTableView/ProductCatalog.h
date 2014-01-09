@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CartCatalog : NSObject
-+(id)defaultCartCatalog;
+@interface ProdctCatalog : NSObject
++(id)defaultProductCatalog;
 
 -(id)productAt:(int)index;
 -(int)numberOfProducts;

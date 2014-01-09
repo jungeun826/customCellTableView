@@ -7,14 +7,20 @@
 //
 
 #import "Product.h"
+@interface Product()
+@end
 
 @implementation Product
-+(id)product:(NSString *)name price:(NSString *)price image:(NSString *)image{
++(id)productWithName:(NSString *)name code:(NSString *)code price:(NSString *)price image:(NSString *)image{
     Product *item = [[Product alloc]init];
     item.name = name;
     item.price = price;
     item.imageName = image;
+    item.code = code;
     
     return item;
+}
+-(BOOL)isEqualProduct:(NSString *)code{
+    return [self.code isEqualToString:code];
 }
 @end

@@ -27,7 +27,10 @@
 		00F3DB84187C0C4A00B76827 /* ball1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F3DB80187C0C4A00B76827 /* ball1.png */; };
 		00F3DB85187C0C4A00B76827 /* ball2.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F3DB81187C0C4A00B76827 /* ball2.png */; };
 		00F3DB86187C0C4A00B76827 /* ball3.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F3DB82187C0C4A00B76827 /* ball3.png */; };
-		00F4311A187E5C0900DCD80B /* NSObject+CartCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F43119187E5C0900DCD80B /* NSObject+CartCatalog.m */; };
+		00F4311A187E5C0900DCD80B /* ProductCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F43119187E5C0900DCD80B /* ProductCatalog.m */; };
+		00F4311D187E721D00DCD80B /* Cart.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F4311C187E721D00DCD80B /* Cart.m */; };
+		00F43120187E72B700DCD80B /* CartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F4311F187E72B700DCD80B /* CartItem.m */; };
+		00F43123187E7BAC00DCD80B /* CartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F43122187E7BAC00DCD80B /* CartCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +72,14 @@
 		00F3DB81187C0C4A00B76827 /* ball2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball2.png; sourceTree = "<group>"; };
 		00F3DB82187C0C4A00B76827 /* ball3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball3.png; sourceTree = "<group>"; };
 		00F3DB8A187C0F4B00B76827 /* CarDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarDelegate.h; sourceTree = "<group>"; };
-		00F43118187E5C0900DCD80B /* NSObject+CartCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CartCatalog.h"; sourceTree = "<group>"; };
-		00F43119187E5C0900DCD80B /* NSObject+CartCatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CartCatalog.m"; sourceTree = "<group>"; };
+		00F43118187E5C0900DCD80B /* ProductCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCatalog.h; sourceTree = "<group>"; };
+		00F43119187E5C0900DCD80B /* ProductCatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCatalog.m; sourceTree = "<group>"; };
+		00F4311B187E721D00DCD80B /* Cart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cart.h; sourceTree = "<group>"; };
+		00F4311C187E721D00DCD80B /* Cart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cart.m; sourceTree = "<group>"; };
+		00F4311E187E72B700DCD80B /* CartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartItem.h; sourceTree = "<group>"; };
+		00F4311F187E72B700DCD80B /* CartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartItem.m; sourceTree = "<group>"; };
+		00F43121187E7BAC00DCD80B /* CartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartCell.h; sourceTree = "<group>"; };
+		00F43122187E7BAC00DCD80B /* CartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +152,14 @@
 				00F3DB73187C09AA00B76827 /* Product.m */,
 				00F3DB7B187C0A9B00B76827 /* ProductCell.h */,
 				00F3DB7C187C0A9B00B76827 /* ProductCell.m */,
-				00F43118187E5C0900DCD80B /* NSObject+CartCatalog.h */,
-				00F43119187E5C0900DCD80B /* NSObject+CartCatalog.m */,
+				00F43118187E5C0900DCD80B /* ProductCatalog.h */,
+				00F43119187E5C0900DCD80B /* ProductCatalog.m */,
+				00F4311B187E721D00DCD80B /* Cart.h */,
+				00F4311C187E721D00DCD80B /* Cart.m */,
+				00F4311E187E72B700DCD80B /* CartItem.h */,
+				00F4311F187E72B700DCD80B /* CartItem.m */,
+				00F43121187E7BAC00DCD80B /* CartCell.h */,
+				00F43122187E7BAC00DCD80B /* CartCell.m */,
 			);
 			path = customCellTableView;
 			sourceTree = "<group>";
@@ -290,11 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00F43123187E7BAC00DCD80B /* CartCell.m in Sources */,
+				00F4311D187E721D00DCD80B /* Cart.m in Sources */,
 				00F3DB7D187C0A9B00B76827 /* ProductCell.m in Sources */,
-				00F4311A187E5C0900DCD80B /* NSObject+CartCatalog.m in Sources */,
+				00F4311A187E5C0900DCD80B /* ProductCatalog.m in Sources */,
 				00F3DB54187C092500B76827 /* ViewController.m in Sources */,
 				00F3DB74187C09AA00B76827 /* Product.m in Sources */,
 				00F3DB4E187C092500B76827 /* AppDelegate.m in Sources */,
+				00F43120187E72B700DCD80B /* CartItem.m in Sources */,
 				00F3DB4A187C092500B76827 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

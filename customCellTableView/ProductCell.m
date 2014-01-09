@@ -18,8 +18,6 @@
     self.productName.text = item.name;
     self.productImage.image = [UIImage imageNamed:item.imageName];
     self.productPrice.text = item.price;
-    
-    
 }
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

@@ -9,40 +9,27 @@
 #import "ViewController.h"
 #import "ProductCell.h"
 #import "Product.h"
-#import "NSObject+CartCatalog.h"
+#import "ProductCatalog.h"
+#import "Cart.h"
+#import "CartCell.h"
+#import "CartItem.h"
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate, CarDelegate>{
-    NSMutableArray *_cartItems;
-    CartCatalog *_cartCatalog;
+    Cart *_cart;
+    ProdctCatalog *_productCatalog;
 }
 @property (weak, nonatomic) IBOutlet UITableView *table;
 
 @end
 
 @implementation ViewController
--(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.section == 0)
-        return UITableViewCellEditingStyleNone;
-    else
-        return UITableViewCellEditingStyleDelete;
-}
-//밀어서 셀 삭제
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.section == 1){
-        //데이터 삭제
-        [_cartItems removeObjectAtIndex:indexPath.row];
-        //테이블 셀 삭제
-        NSArray *rows = [NSArray arrayWithObject:indexPath];
-        [tableView deleteRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
-}
 -(void)addItem:(id)sender{
     UITableViewCell *cell = (UITableViewCell *)sender;
     
     NSIndexPath *indexPath = [self.table indexPathForCell:cell];
     NSLog(@"%d",(int)indexPath.row);
-    Product *item = [_cartCatalog productAt:(int)indexPath.row];
+    Product *item = [_productCatalog productAt:(int)indexPath.row];
     
-    [_cartItems addObject:item];
+    [_cart addProduct:item];
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
     [self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -51,9 +38,9 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if(section == 0)
-        return [_cartCatalog numberOfProducts];
+        return [_productCatalog numberOfProducts];
     else
-        return [_cartItems count];
+        return [_cart numberOfCartItems];
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return (section ==0) ? @"Product":@"Items in Cart";
@@ -62,16 +49,16 @@
     
     if(indexPath.section == 0){
         ProductCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PRODUCT_CELL" forIndexPath:indexPath];
-        Product *item = [_cartCatalog productAt:(int)indexPath.row];
+        Product *item = [_productCatalog productAt:(int)indexPath.row];
         [cell setProductInfo:item];
     
         cell.delegate = self;
         return cell;
     }else {
-        ProductCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CART_CELL" forIndexPath:indexPath];
-         NSLog(@"cart %d",(int)indexPath.row);
-        Product *item = _cartItems[indexPath.row];
-        cell.textLabel.text = item.name;
+        CartCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CART_CELL" forIndexPath:indexPath];
+        CartItem *item = [_cart cartAt:(int)indexPath.row];
+        cell.delegate = self;
+        [cell setCartItem:item];
         //NSLog(@"pathrow : %d, %@", ad,item.name);
         return cell;
     }
@@ -81,8 +68,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    _cartCatalog = [CartCatalog defaultCartCatalog];
-    _cartItems = [[NSMutableArray alloc]init];
+    _productCatalog = [ProdctCatalog defaultProductCatalog];
+    _cart = [[Cart alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,5 +77,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)incQuantity:(NSString *)productCode{
+    [_cart incQuantity:productCode];
+    
+    
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
+    [self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.table setNeedsDisplay];
+}
+-(void)decQuantity:(NSString *)productCode{
+    [_cart decQuantity:productCode];
+    
+    
+    NSIndexSet *indexSet= [NSIndexSet indexSetWithIndex:1];
+    [self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 
 @end
