@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol CarDelegate <NSObject>
+@protocol CartDelegate <NSObject>
 -(void)addItem:(id)sender;
 -(void)incQuantity:(NSString *)productCode;
 -(void)decQuantity:(NSString *)productCode;

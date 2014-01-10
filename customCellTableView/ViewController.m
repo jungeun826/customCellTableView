@@ -13,7 +13,8 @@
 #import "Cart.h"
 #import "CartCell.h"
 #import "CartItem.h"
-@interface ViewController ()<UITableViewDataSource, UITableViewDelegate, CarDelegate>{
+#import "ProductDetailViewController.h"
+@interface ViewController ()<UITableViewDataSource, UITableViewDelegate, CartDelegate>{
     Cart *_cart;
     ProdctCatalog *_productCatalog;
 }
@@ -22,6 +23,14 @@
 @end
 
 @implementation ViewController
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    ProductDetailViewController * detailVC = segue.destinationViewController;
+    
+    NSIndexPath *indexPath = [self.table indexPathForCell:sender];
+    Product *selectedProduct = [_productCatalog productAt:(int)indexPath.row];
+    
+    detailVC.productCode = selectedProduct.code;
+}
 -(void)addItem:(id)sender{
     UITableViewCell *cell = (UITableViewCell *)sender;
     
@@ -62,6 +71,12 @@
         //NSLog(@"pathrow : %d, %@", ad,item.name);
         return cell;
     }
+}
+-(void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = YES;
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    self.navigationController.navigationBarHidden = NO;
 }
 - (void)viewDidLoad
 {

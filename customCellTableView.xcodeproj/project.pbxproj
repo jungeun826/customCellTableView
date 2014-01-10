@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00B15277187FE59C0036182C /* ProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B15276187FE59C0036182C /* ProductDetailViewController.m */; };
 		00F3DB3E187C092500B76827 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F3DB3D187C092500B76827 /* Foundation.framework */; };
 		00F3DB40187C092500B76827 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F3DB3F187C092500B76827 /* CoreGraphics.framework */; };
 		00F3DB42187C092500B76827 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F3DB41187C092500B76827 /* UIKit.framework */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00B15275187FE59C0036182C /* ProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailViewController.h; sourceTree = "<group>"; };
+		00B15276187FE59C0036182C /* ProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailViewController.m; sourceTree = "<group>"; };
 		00F3DB3A187C092500B76827 /* customCellTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customCellTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F3DB3D187C092500B76827 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		00F3DB3F187C092500B76827 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,7 +74,7 @@
 		00F3DB80187C0C4A00B76827 /* ball1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball1.png; sourceTree = "<group>"; };
 		00F3DB81187C0C4A00B76827 /* ball2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball2.png; sourceTree = "<group>"; };
 		00F3DB82187C0C4A00B76827 /* ball3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball3.png; sourceTree = "<group>"; };
-		00F3DB8A187C0F4B00B76827 /* CarDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarDelegate.h; sourceTree = "<group>"; };
+		00F3DB8A187C0F4B00B76827 /* CartDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartDelegate.h; sourceTree = "<group>"; };
 		00F43118187E5C0900DCD80B /* ProductCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCatalog.h; sourceTree = "<group>"; };
 		00F43119187E5C0900DCD80B /* ProductCatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCatalog.m; sourceTree = "<group>"; };
 		00F4311B187E721D00DCD80B /* Cart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cart.h; sourceTree = "<group>"; };
@@ -139,7 +142,7 @@
 		00F3DB43187C092500B76827 /* customCellTableView */ = {
 			isa = PBXGroup;
 			children = (
-				00F3DB8A187C0F4B00B76827 /* CarDelegate.h */,
+				00F3DB8A187C0F4B00B76827 /* CartDelegate.h */,
 				00F3DB7E187C0C2E00B76827 /* Res */,
 				00F3DB4C187C092500B76827 /* AppDelegate.h */,
 				00F3DB4D187C092500B76827 /* AppDelegate.m */,
@@ -160,6 +163,8 @@
 				00F4311F187E72B700DCD80B /* CartItem.m */,
 				00F43121187E7BAC00DCD80B /* CartCell.h */,
 				00F43122187E7BAC00DCD80B /* CartCell.m */,
+				00B15275187FE59C0036182C /* ProductDetailViewController.h */,
+				00B15276187FE59C0036182C /* ProductDetailViewController.m */,
 			);
 			path = customCellTableView;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00F43123187E7BAC00DCD80B /* CartCell.m in Sources */,
+				00B15277187FE59C0036182C /* ProductDetailViewController.m in Sources */,
 				00F4311D187E721D00DCD80B /* Cart.m in Sources */,
 				00F3DB7D187C0A9B00B76827 /* ProductCell.m in Sources */,
 				00F4311A187E5C0900DCD80B /* ProductCatalog.m in Sources */,

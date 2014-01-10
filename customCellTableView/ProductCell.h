@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Product.h"
-#import "CarDelegate.h"
+#import "CartDelegate.h"
 @interface ProductCell : UITableViewCell
-@property (weak) id<CarDelegate> delegate;
+@property (weak) id<CartDelegate> delegate;
 -(void)setProductInfo:(Product *)item;
 @end

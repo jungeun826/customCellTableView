@@ -30,7 +30,14 @@ static ProdctCatalog *_instance = nil;
     }
     return self;
 }
-
+-(Product *)productWithCode:(NSString *)productCode{
+    for(Product *one in data){
+        if([one isEqualProduct:productCode]){
+            return one;
+        }
+    }
+    return nil;
+}
 -(id)productAt:(int)index{
     return [data objectAtIndex:index];
 }
