@@ -14,6 +14,12 @@
 
 @end
 @implementation Cart
+static Cart *_instance;
++(id)sharedCart{
+        if(_instance == nil)
+            _instance = [[Cart alloc]init];
+        return _instance;
+}
 -(id)init{
     self = [super init];
     if(self){

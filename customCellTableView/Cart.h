@@ -16,4 +16,5 @@
 -(CartItem *)searchCartItemWithCode:(NSString *)productCode;
 -(int)numberOfCartItems;
 -(CartItem *)cartAt:(int)index;
++(id)sharedCart;
 @end

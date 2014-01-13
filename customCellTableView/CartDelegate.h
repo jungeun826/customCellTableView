@@ -10,6 +10,10 @@
 
 @protocol CartDelegate <NSObject>
 -(void)addItem:(id)sender;
+@end
+
+@protocol CartCellDelegate <NSObject>
+
 -(void)incQuantity:(NSString *)productCode;
 -(void)decQuantity:(NSString *)productCode;
 @end
